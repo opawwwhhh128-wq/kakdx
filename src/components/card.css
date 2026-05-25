@@ -1,0 +1,214 @@
+/* ========================================
+   COMPONENT STYLES - CARDS
+   Variants: default, elevated, bordered
+   States: default, hover
+   ======================================== */
+
+.card {
+  background-color: var(--color-surface-elevated);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.card-default {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.card-elevated {
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-md);
+}
+
+.card-bordered {
+  background-color: var(--color-surface-elevated);
+  border: 2px solid var(--color-border);
+}
+
+/* HOVER EFFECTS */
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* CARD VARIANTS WITH ACCENT */
+.card-accent {
+  border-color: var(--color-red-primary);
+  position: relative;
+}
+
+.card-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-red-primary), var(--color-red-hover));
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* CARD CONTENT STRUCTURE */
+.card-header {
+  margin-bottom: var(--space-6);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.card-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-4);
+}
+
+.card-description {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.card-body {
+  margin-bottom: var(--space-6);
+}
+
+.card-footer {
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* FEATURE LIST IN CARDS */
+.card-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}
+
+.card-features li::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-red-light);
+  color: var(--color-red-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* PRICING CARD SPECIFIC */
+.card-pricing {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-pricing.featured {
+  transform: scale(1.05);
+  border-color: var(--color-red-primary);
+  box-shadow: var(--shadow-red);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .card-pricing.featured {
+    transform: scale(1);
+  }
+}
+
+.pricing-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: linear-gradient(135deg, var(--color-red-primary), var(--color-red-hover));
+  color: var(--color-white);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.pricing-amount {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.pricing-period {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+/* TESTIMONIAL CARD */
+.card-testimonial {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.testimonial-quote {
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  background-color: var(--color-gray-200);
+}
+
+.testimonial-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.testimonial-role {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: var(--space-1);
+  color: #fbbf24; /* Amber for stars */
+}

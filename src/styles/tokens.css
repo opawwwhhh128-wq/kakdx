@@ -1,0 +1,154 @@
+/* ========================================
+   DESIGN TOKENS - BARBERIA CHIQUE
+   Black & Red Premium Design System
+   ======================================== */
+
+:root {
+  /* COLORS - Black & Red Palette */
+  --color-black: #0a0a0a;
+  --color-black-secondary: #1a1a1a;
+  --color-black-tertiary: #2a2a2a;
+  
+  --color-red-primary: #dc2626;
+  --color-red-hover: #b91c1c;
+  --color-red-active: #991b1b;
+  --color-red-light: #fee2e2;
+  --color-red-muted: #fef2f2;
+  
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  
+  /* SEMANTIC COLORS */
+  --color-background: var(--color-white);
+  --color-surface: var(--color-gray-50);
+  --color-surface-elevated: var(--color-white);
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-500);
+  --color-border: var(--color-gray-200);
+  --color-border-strong: var(--color-gray-300);
+  --color-accent: var(--color-red-primary);
+  --color-accent-hover: var(--color-red-hover);
+  --color-accent-muted: var(--color-red-muted);
+  
+  /* TYPOGRAPHY - Fluid Scale with 1.25 ratio */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.38vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.63vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --text-3xl: clamp(1.875rem, 1.5rem + 1.88vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 1.75rem + 2.5vw, 3rem);
+  --text-5xl: clamp(2.5rem, 2rem + 2.5vw, 3.75rem);
+  --text-6xl: clamp(3rem, 2.25rem + 3.75vw, 4.5rem);
+  --text-hero: clamp(3.5rem, 2.5rem + 5vw, 6rem);
+  
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* SPACING - 4px Base Scale */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-28: 7rem;     /* 112px */
+  --space-32: 8rem;     /* 128px */
+  
+  /* BORDER RADIUS */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+  
+  /* SHADOWS - 5 Levels */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-red: 0 10px 40px -10px rgba(220, 38, 38, 0.5);
+  
+  /* TRANSITIONS & MOTION */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.6, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  
+  /* LAYOUT */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-max: 1440px;
+  
+  /* HEADER HEIGHT */
+  --header-height: 80px;
+  
+  /* FOCUS RING */
+  --focus-ring: 0 0 0 3px rgba(220, 38, 38, 0.4);
+}
+
+/* DARK MODE SUPPORT (Optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-black);
+    --color-surface: var(--color-black-secondary);
+    --color-surface-elevated: var(--color-black-tertiary);
+    --color-text-primary: var(--color-white);
+    --color-text-secondary: var(--color-gray-300);
+    --color-text-muted: var(--color-gray-400);
+    --color-border: var(--color-gray-700);
+    --color-border-strong: var(--color-gray-600);
+  }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
